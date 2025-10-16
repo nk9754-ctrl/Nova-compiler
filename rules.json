@@ -1,0 +1,141 @@
+[
+  {
+    "keyword": "class",
+    "patterns": ["class (\\w+)$"],
+    "template": "public class %s {"
+  },
+  {
+    "keyword": "inheritance",
+    "patterns": ["class (\\w+) extends (\\w+)$"],
+    "template": "public class %s extends %s {"
+  },
+  {
+    "keyword": "interface",
+    "patterns": ["interface (\\w+)$"],
+    "template": "interface %s {"
+  },
+  {
+    "keyword": "implements",
+    "patterns": ["class (\\w+) implements (\\w+)$"],
+    "template": "public class %s implements %s {"
+  },
+  {
+    "keyword": "constructor",
+    "patterns": ["constructor (\\w+)\\(\\)"],
+    "template": "public %s() {"
+  },
+  {
+    "keyword": "class method",
+    "patterns": ["class method (\\w+)\\(\\)"],
+    "template": "public void %s() {"
+  },
+  {
+    "keyword": "interface method",
+    "patterns": ["interface method (\\w+)\\(\\)"],
+    "template": "void %s();"
+  },
+  {
+    "keyword": "method",
+    "patterns": ["method (\\w+)\\(\\)"],
+    "template": "public void %s() {"
+  },
+  {
+    "keyword": "main method",
+    "patterns": ["method main\\(\\)"],
+    "template": "public static void main(String[] args) {"
+  },
+  {
+    "keyword": "object",
+    "patterns": ["(\\w+) (\\w+) = new (\\w+)\\(\\)"],
+    "template": "%s %s = new %s();"
+  },
+  {
+    "keyword": "call",
+    "patterns": ["call (\\w+)\\.(\\w+)\\(\\)"],
+    "template": "%s.%s();"
+  },
+  {
+    "keyword": "print",
+    "patterns": ["print\\((.*)\\)"],
+    "template": "System.out.println(%s);"
+  },
+  {
+    "keyword": "end",
+    "patterns": ["end"],
+    "template": "}"
+  },
+  {
+    "keyword": "if",
+    "patterns": ["if (.*) then"],
+    "template": "if (%s) {"
+  },
+  {
+    "keyword": "else if",
+    "patterns": ["else if (.*) then"],
+    "template": "else if (%s) {"
+  },
+  {
+    "keyword": "else",
+    "patterns": ["else"],
+    "template": "else {"
+  },
+  {
+    "keyword": "end if",
+    "patterns": ["end if"],
+    "template": "}"
+  },
+  {
+    "keyword": "for",
+    "patterns": ["for (\\w+) = (\\d+) to (\\d+)"],
+    "template": "for (int %s = %s; %s <= %s; %s++) {"
+  },
+  {
+    "keyword": "end for",
+    "patterns": ["end for"],
+    "template": "}"
+  },
+  {
+    "keyword": "while",
+    "patterns": ["while (.*)"],
+    "template": "while (%s) {"
+  },
+  {
+    "keyword": "end while",
+    "patterns": ["end while"],
+    "template": "}"
+  },
+  {
+    "keyword": "var declaration",
+    "patterns": ["(int|double|boolean|string) (\\w+)"],
+    "template": "$1 $2;"
+  },
+  {
+    "keyword": "var assignment",
+    "patterns": ["(\\w+) = (.*)"],
+    "template": "$1 = $2;"
+  },
+  {
+    "keyword": "var declaration with assignment",
+    "patterns": ["(int|double|boolean|string) (\\w+) = (.*)"],
+    "template": "$1 $2 = $3;"
+  },
+  {
+  "keyword": "new_inner",
+  "patterns": ["(\\w+) = new (\\w+)\\(\\)"],
+  "template": "%1 = obj.new %2();"
+},
+{
+  "keyword": "object creation",
+  "patterns": ["Object (\\w+)=new (\\w+)\\(\\)"],
+  "template": "%s %s = new %s();"
+},
+{
+  "keyword": "object creation",
+  "patterns": ["Object (\\w+)=new (\\w+)\\(\\)"],
+  "template": "%2 %1 = new %2();"
+}
+
+
+
+
+]
